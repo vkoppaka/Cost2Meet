@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Cost2Meet
 {
@@ -7,13 +6,8 @@ namespace Cost2Meet
 	{
 		public static Page GetMainPage ()
 		{	
-			return new ContentPage { 
-				Content = new Label {
-					Text = "Hello, Forms!",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
+			var mainPage = new MainPage ( );
+			return new NavigationPage ( mainPage );
 		}
 	}
 }
