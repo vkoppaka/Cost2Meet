@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin;
 
 namespace Cost2Meet
 {
@@ -6,7 +7,7 @@ namespace Cost2Meet
 	{
 		public static void LogException(Exception ex)
 		{
-			//
+			Insights.Report (ex);
 		}
 	}
 }

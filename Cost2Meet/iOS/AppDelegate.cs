@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 using Xamarin.Forms;
+using Xamarin;
 
 namespace Cost2Meet.iOS
 {
@@ -16,6 +14,8 @@ namespace Cost2Meet.iOS
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			Insights.Initialize(App.InsightsKey);
+
 			Forms.Init ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
