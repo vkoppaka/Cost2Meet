@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Cost2Meet
@@ -44,12 +43,36 @@ namespace Cost2Meet
 		public CalculatePage ()
 		{
 			InitializeComponent ();
+			InitializeToolbar ();
+			costCalculator = new CostCalculator ();
 			BindingContext = this;
+		}
+
+		private void InitializeToolbar ( )
+		{
+			calculateButton = new ToolbarItem ( ) { Name = "Calculate" };
+			calculateButton.Activated += ((object o, EventArgs e ) => CalculateMeetingCost( ));
+			ToolbarItems.Add (calculateButton);
+		}
+
+		private async void CalculateMeetingCost ()
+		{
+			var meetingCost = costCalculator.Calculate (NumberOfPeopleAttending, AverageRate, MeetingStartTime, MeetingEndTime);
+
+			bool okAndSave = await DisplayAlert ("This meeting cost you $" + meetingCost, "", "Ok", "Cancel");
+			if ( okAndSave ) 
+			{
+				//Do actual save
+			}
 		}
 
 		private TimeSpan meetingStartTime;
 		private TimeSpan meetingEndTime;
 
+		ToolbarItem calculateButton;
+
+
+		private CostCalculator costCalculator;
 
 	}
 }
