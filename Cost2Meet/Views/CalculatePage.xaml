@@ -3,7 +3,19 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Cost2Meet.CalculatePage"
+	xmlns:local="clr-namespace:Cost2Meet.Resources;assembly=Cost2Meet"
+
 	Title="Calculate">
 	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Padding="{x:Static local:PaddingResources.Main}" Spacing="{x:Static local:SpacingResources.Main}">
+			<Label Text="Number of people attending" HorizontalOptions="FillAndExpand" />
+			<Entry Text="{Binding NumberOfPeopleAttending}" Keyboard="Numeric" WidthRequest="400" HorizontalOptions="FillAndExpand" />
+			<Label Text="Average rate of attending" HorizontalOptions="FillAndExpand" />
+			<Entry Text="{Binding AverageRate}" Keyboard="Numeric" WidthRequest="400" HorizontalOptions="FillAndExpand" />
+			<Label Text="Start Time" HorizontalOptions="FillAndExpand" />
+			<TimePicker Time="{Binding MeetingStartTime}" WidthRequest="400" HorizontalOptions="FillAndExpand" />
+			<Label Text="End Time" HorizontalOptions="FillAndExpand" />
+			<TimePicker Time="{Binding MeetingEndTime}" WidthRequest="400" HorizontalOptions="FillAndExpand" />
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
