@@ -4,6 +4,7 @@ using MonoTouch.UIKit;
 
 using Xamarin.Forms;
 using Xamarin;
+using SQLite.Net.Platform.XamarinIOS;
 
 namespace Cost2Meet.iOS
 {
@@ -19,8 +20,11 @@ namespace Cost2Meet.iOS
 			Forms.Init ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
+
+			string dbPath = DatabaseFilePathRetriever.Get(App.DatabaseName);
+
+
+			window.RootViewController = App.GetMainPage (new SQLitePlatformIOS(), dbPath).CreateViewController ();
 			window.MakeKeyAndVisible ();
 			
 			return true;

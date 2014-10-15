@@ -69,6 +69,6 @@ Global
 		{E779054B-1E06-4C01-B2C5-B38B896710F7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\Cost2Meet.iOS.csproj
+		StartupItem = Android\Cost2Meet.Android.csproj
 	EndGlobalSection
 EndGlobal

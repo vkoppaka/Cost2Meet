@@ -5,6 +5,7 @@ using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
 using Xamarin;
+using SQLite.Net.Platform.XamarinAndroid;
 
 
 namespace Cost2Meet.Android
@@ -21,7 +22,10 @@ namespace Cost2Meet.Android
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			string dbPath = DatabaseFilePathRetriever.Get(App.DatabaseName);
+
+
+			SetPage (App.GetMainPage (new SQLitePlatformAndroid(), dbPath));
 		}
 	}
 }
