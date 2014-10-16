@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cost2Meet.iOS", "iOS\Cost2M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cost2Meet.Android", "Android\Cost2Meet.Android.csproj", "{5528BB0B-AC2E-4C8B-814A-70199ED806C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cost2Meet.UnitTests", "Cost2Meet.UnitTests\Cost2Meet.UnitTests.csproj", "{39A9D200-C40B-41F0-8E31-7072488F206F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,22 @@ Global
 		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|iPhone.Build.0 = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{39A9D200-C40B-41F0-8E31-7072488F206F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{5528BB0B-AC2E-4C8B-814A-70199ED806C9}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
 		{5528BB0B-AC2E-4C8B-814A-70199ED806C9}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{5528BB0B-AC2E-4C8B-814A-70199ED806C9}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
@@ -69,6 +87,6 @@ Global
 		{E779054B-1E06-4C01-B2C5-B38B896710F7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\Cost2Meet.Android.csproj
+		StartupItem = iOS\Cost2Meet.iOS.csproj
 	EndGlobalSection
 EndGlobal
